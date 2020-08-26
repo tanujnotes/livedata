@@ -9,6 +9,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:fontFamily="sans-serif-light"
         android:lines="1"
         android:maxLines="1"
         android:padding="8dp" />
@@ -18,12 +19,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:padding="8dp" />
+        android:fontFamily="sans-serif-light"
+        android:padding="8dp"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:id="@+id/timeStamp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:fontFamily="sans-serif-light"
         android:padding="8dp" />
+
 </LinearLayout>

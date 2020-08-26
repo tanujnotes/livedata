@@ -12,4 +12,5 @@
     <string name="dash_2">Dash 2</string>
     <string name="notif_1">Notif 1</string>
     <string name="notif_2">Notif 2</string>
+    <string name="home_note">NOTE: Session starts when app starts and it persists as long as app is running even in the background. Session stops when you properly close the app.\n\nKNOWN ISSUE: On some phones (mostly Chinese phones) SESSION STOP event won\'t be registered reliably if you choose to close the app by swiping from the system tray. It is because these OEMs force close the app immediately instead of giving the app a chance to exit gracefully.</string>
 </resources>

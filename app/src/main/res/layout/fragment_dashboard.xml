@@ -58,14 +58,14 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
-            android:text="Dash 1" />
+            android:text="@string/dash_1" />
 
         <Button
             android:id="@+id/dashButton2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Dash 2" />
+            android:text="@string/dash_2" />
 
     </LinearLayout>
 </FrameLayout>

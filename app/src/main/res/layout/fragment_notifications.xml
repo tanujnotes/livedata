@@ -25,14 +25,14 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
             android:layout_weight="1"
-            android:text="Notif 1" />
+            android:text="@string/notif_1" />
 
         <Button
             android:id="@+id/notifButton2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Notif 2" />
+            android:text="@string/notif_2" />
 
     </LinearLayout>
 </FrameLayout>

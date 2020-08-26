@@ -6,4 +6,10 @@
     <string name="uid">uid</string>
     <string name="event">Event</string>
     <string name="time">Time</string>
+    <string name="home_1">Home 1</string>
+    <string name="home_2">Home 2</string>
+    <string name="dash_1">Dash 1</string>
+    <string name="dash_2">Dash 2</string>
+    <string name="notif_1">Notif 1</string>
+    <string name="notif_2">Notif 2</string>
 </resources>

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cintaanalytics.MainViewModel
 import com.example.cintaanalytics.R
 import com.example.cintaanalytics.db.Event
+import com.example.cintaanalytics.helpers.Constant
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 
 class DashboardFragment : Fragment() {
@@ -23,7 +24,6 @@ class DashboardFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_dashboard, container, false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val viewModel = activity?.run {
@@ -34,8 +34,10 @@ class DashboardFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
         initViewModel(viewModel, adapter)
-    }
 
+        dashButton1.setOnClickListener { viewModel.addEvent(Constant.EVENT_DASH_BUTTON_1) }
+        dashButton2.setOnClickListener { viewModel.addEvent(Constant.EVENT_DASH_BUTTON_2) }
+    }
 
     private fun initViewModel(viewModel: MainViewModel, appAdapter: AnalyticsAdapter) {
         viewModel.getEvents()?.observe(viewLifecycleOwner, Observer<List<Event>> {

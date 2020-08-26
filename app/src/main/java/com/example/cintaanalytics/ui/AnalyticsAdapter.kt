@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.cintaanalytics.R
 import com.example.cintaanalytics.db.Event
 import kotlinx.android.synthetic.main.adapter_events.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class AnalyticsAdapter : RecyclerView.Adapter<AnalyticsAdapter.ViewHolder>() {
 
@@ -33,7 +35,17 @@ class AnalyticsAdapter : RecyclerView.Adapter<AnalyticsAdapter.ViewHolder>() {
         fun bind(event: Event) = with(itemView) {
             uid.text = event.uid
             eventName.text = event.name
-            timeStamp.text = event.timestamp.toString()
+            timeStamp.text = formatTime(event.timestamp)
+        }
+
+        private fun formatTime(timeStamp: Long): String {
+            return try {
+                val dateFormat = SimpleDateFormat("dd MMM, yy HH:mm:ss", Locale.getDefault());
+                val date = Date(timeStamp);
+                dateFormat.format(date)
+            } catch (e: Exception) {
+                "Error!"
+            }
         }
     }
 }

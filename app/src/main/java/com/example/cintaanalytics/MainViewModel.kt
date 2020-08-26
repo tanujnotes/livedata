@@ -10,8 +10,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun getEvents() = repository.getEvents()
 
-    fun setEvent(event: Event) {
+    private fun setEvent(event: Event) {
         repository.setEvent(event)
+    }
+
+    fun addEvent(eventName: String) {
+        val event = Event("sdf", eventName, System.currentTimeMillis())
+        setEvent(event)
     }
 
 }
